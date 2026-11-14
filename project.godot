@@ -10,9 +10,9 @@ config_version=5
 
 [application]
 
-config/name="Haven-Game"
-run/main_scene="uid://0rvbcw5hbcnl"
+config/name="Git test"
 config/features=PackedStringArray("4.7", "Mobile")
+config/icon="res://icon.svg"
 
 [display]
 
@@ -25,5 +25,6 @@ window/stretch/aspect="expand"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="mobile"
