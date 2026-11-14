@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://cgoyj63c3ygiv"]
+
+[ext_resource type="Script" uid="uid://dksc8vc0cb3w1" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dwmeo"]
+font_size = 64
+
+[sub_resource type="Theme" id="Theme_b8fgr"]
+default_font_size = 56
+
+[sub_resource type="Theme" id="Theme_xg4w6"]
+default_font_size = 56
+
+[node name="Main Menu" type="Control" unique_id=474810897 node_paths=PackedStringArray("playB", "quitB")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l6cm7")
+playB = NodePath("VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/Play")
+quitB = NodePath("VBoxContainer/MarginContainer/VBoxContainer/MarginContainer/Quit")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=605551239]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer" unique_id=1437045610]
+layout_mode = 2
+theme_override_constants/margin_top = 101
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer" unique_id=315494285]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer2" unique_id=1036910190]
+layout_mode = 2
+text = "Game Name"
+label_settings = SubResource("LabelSettings_dwmeo")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=295586169]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer" unique_id=695785473]
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/MarginContainer/VBoxContainer" unique_id=969401953]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Play" type="Button" parent="VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2" unique_id=1586151419]
+layout_mode = 2
+theme = SubResource("Theme_b8fgr")
+text = "Play"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/MarginContainer/VBoxContainer" unique_id=1046706070]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Quit" type="Button" parent="VBoxContainer/MarginContainer/VBoxContainer/MarginContainer" unique_id=513999205]
+layout_mode = 2
+theme = SubResource("Theme_xg4w6")
+text = "Quit"
