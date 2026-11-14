@@ -3,7 +3,6 @@ extends Control
 @export var playB: Button
 @export var quitB: Button
 
-signal quit
 signal play
 
 func emit_play():
