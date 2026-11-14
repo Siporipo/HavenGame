@@ -1,6 +1,20 @@
-[gd_scene format=3 uid="uid://0rvbcw5hbcnl"]
+[gd_scene format=3 uid="uid://ca4ul17xd6s38"]
 
-[ext_resource type="Script" uid="uid://dg8pck6oryjyg" path="res://scripts/master.gd" id="1_aynem"]
+[ext_resource type="PackedScene" uid="uid://wwefj0140nb2" path="res://scenes/player.tscn" id="1_aynem"]
 
-[node name="Master" type="Node2D" unique_id=2075171902]
-script = ExtResource("1_aynem")
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pmvmn"]
+distance = -1.0
+
+[node name="Master" type="Node2D" unique_id=1841494045]
+
+[node name="Player" parent="." unique_id=1902593887 instance=ExtResource("1_aynem")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=620500458]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=840594702]
+position = Vector2(0, 1)
+shape = SubResource("WorldBoundaryShape2D_pmvmn")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=839661647]
+position = Vector2(19, 0)
+zoom = Vector2(2, 2)
