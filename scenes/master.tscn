@@ -1,55 +1,6 @@
 [gd_scene format=3 uid="uid://ca4ul17xd6s38"]
 
-[ext_resource type="PackedScene" uid="uid://wwefj0140nb2" path="res://scenes/player.tscn" id="1_aynem"]
-[ext_resource type="Texture2D" uid="uid://b1jpeql0e2hhk" path="res://assets/PlatformerTilemapBase.png" id="2_jooxx"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jooxx"]
-texture = ExtResource("2_jooxx")
-0:0/0 = 0
-1:0/0 = 0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
-2:0/0 = 0
-3:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-0:5/0 = 0
-1:5/0 = 0
-3:5/0 = 0
-0:6/0 = 0
-1:6/0 = 0
-2:6/0 = 0
-3:6/0 = 0
-0:7/0 = 0
-1:7/0 = 0
-2:7/0 = 0
-3:7/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_pmvmn"]
-physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_jooxx")
+[ext_resource type="Script" uid="uid://dg8pck6oryjyg" path="res://scripts/master.gd" id="1_aynem"]
 
 [node name="Master" type="Node2D" unique_id=1841494045]
-
-[node name="Player" parent="." unique_id=1902593887 instance=ExtResource("1_aynem")]
-
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=839661647]
-position = Vector2(19, 0)
-zoom = Vector2(2, 2)
-position_smoothing_enabled = true
-
-[node name="TileMap" type="TileMap" parent="." unique_id=1901015787]
-tile_set = SubResource("TileSet_pmvmn")
-format = 2
-layer_0/tile_data = PackedInt32Array(65530, 65536, 0, 65531, 65536, 0, 65532, 65536, 0, 65533, 65536, 0, 65534, 65536, 0, 65535, 65536, 0, 0, 65536, 0, 1, 65536, 0, 2, 65536, 0, 3, 65536, 0, 4, 65536, 0, 65519, 65536, 0, 65520, 65536, 0, 65521, 65536, 0, 65522, 65536, 0, 65523, 65536, 0, 65524, 65536, 0, 65525, 65536, 0, 65526, 65536, 0, 65527, 65536, 0, 65528, 65536, 0, 65529, 65536, 0, 5, 65536, 0, 6, 65536, 0, 7, 65536, 0, 8, 65536, 0, 9, 65536, 0, 10, 65536, 0, 11, 65536, 0, 12, 65536, 0, 13, 65536, 0, 14, 65536, 0, 15, 65536, 0, 16, 65536, 0, 17, 65536, 0, 18, 65536, 0, 19, 65536, 0)
+script = ExtResource("1_aynem")
