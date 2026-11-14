@@ -94,22 +94,23 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_13mor"]
-size = Vector2(14, 20)
+size = Vector2(8.5, 15.5)
 
 [node name="Player" type="CharacterBody2D" unique_id=1902593887]
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1512987474]
-position = Vector2(19, -15)
-scale = Vector2(2.1111112, 2.1111112)
+position = Vector2(0, -12.874999)
+scale = Vector2(1.4166666, 1.4305556)
 sprite_frames = SubResource("SpriteFrames_pmvmn")
-animation = &"run"
+animation = &"idle"
 autoplay = "idle"
-frame = 3
-frame_progress = 0.35113806
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=599225032]
-position = Vector2(19, -10)
+position = Vector2(0, -7.75)
 shape = SubResource("RectangleShape2D_13mor")
+
+[node name="Rapid_Jump" type="RayCast2D" parent="." unique_id=669632595]
+target_position = Vector2(0, 9)
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
