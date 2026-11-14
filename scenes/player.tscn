@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://wwefj0140nb2"]
 
-[ext_resource type="Texture2D" uid="uid://4fcvrc15vfwp" path="res://assets/PlatformerCharacterBase.png" id="1_3vyb7"]
+[ext_resource type="Texture2D" uid="uid://b3hpov2ix5d6" path="res://assets/PlatformerCharacterBase.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://b1gudb0u8rrll" path="res://scripts/player_movement.gd" id="1_g2els"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3vyb7"]
@@ -100,6 +100,7 @@ size = Vector2(8.5, 15.5)
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1512987474]
+texture_filter = 1
 position = Vector2(0, -12.874999)
 scale = Vector2(1.4166666, 1.4305556)
 sprite_frames = SubResource("SpriteFrames_pmvmn")
