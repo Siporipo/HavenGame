@@ -6,6 +6,7 @@
 radius = 2.0
 
 [node name="Bullet" type="CharacterBody2D" unique_id=1448301343 node_paths=PackedStringArray("label")]
+process_mode = 1
 rotation = -0.010311309
 script = ExtResource("1_mkf8s")
 label = NodePath("Label")

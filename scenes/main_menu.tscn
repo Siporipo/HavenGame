@@ -33,7 +33,7 @@ grow_vertical = 2
 
 [node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer" unique_id=1437045610]
 layout_mode = 2
-theme_override_constants/margin_top = 101
+theme_override_constants/margin_top = 100
 
 [node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer" unique_id=315494285]
 layout_mode = 2

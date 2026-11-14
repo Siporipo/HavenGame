@@ -97,17 +97,10 @@ animations = [{
 size = Vector2(8.5, 15.5)
 
 [node name="Player" type="CharacterBody2D" unique_id=1902593887]
+process_mode = 1
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1512987474]
-texture_filter = 1
-position = Vector2(0, -12.874999)
-scale = Vector2(1.4166666, 1.4305556)
-sprite_frames = SubResource("SpriteFrames_pmvmn")
-animation = &"idle"
-autoplay = "idle"
-
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=2140050562]
 texture_filter = 1
 position = Vector2(0, -12.874999)
 scale = Vector2(1.4166666, 1.4305556)
