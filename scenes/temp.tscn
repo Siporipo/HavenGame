@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cug6pobv3xnms"]
+
+[ext_resource type="PackedScene" uid="uid://cxyucbhsvvd26" path="res://scenes/verity.tscn" id="1_hj7jr"]
+[ext_resource type="PackedScene" uid="uid://wwefj0140nb2" path="res://scenes/player.tscn" id="2_wq05l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dwmeo"]
+size = Vector2(1318, 283)
+
+[node name="Node2D" type="Node2D" unique_id=1281548073]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=380218705]
+
+[node name="Verity" parent="." unique_id=218832769 instance=ExtResource("1_hj7jr")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1965190969]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1104704757]
+position = Vector2(34, 327)
+shape = SubResource("RectangleShape2D_dwmeo")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D" unique_id=67029700]
+offset_left = -622.0
+offset_top = 187.0
+offset_right = 615.0
+offset_bottom = 558.0
+
+[node name="Player" parent="." unique_id=1902593887 instance=ExtResource("2_wq05l")]
+position = Vector2(-186, 113)

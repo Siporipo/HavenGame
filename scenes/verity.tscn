@@ -98,9 +98,13 @@ script = ExtResource("1_6kb7q")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1620332671]
 sprite_frames = SubResource("SpriteFrames_dwmeo")
 animation = &"shoot"
-frame_progress = 0.9563705
+frame_progress = 0.554951
 
 [node name="Area2D" type="Area2D" parent="." unique_id=336196155]
+collision_layer = 0
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1931479038]
 shape = SubResource("CircleShape2D_dwmeo")
+
+[connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]
