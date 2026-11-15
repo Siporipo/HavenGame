@@ -38,7 +38,7 @@ var camera_target := Vector2(0, 0)
 var camera_tzoom := Vector2(1, 1)
 
 func load_level():
-	if Autoload.level == 9:
+	if Autoload.level == 8:
 		verity = VERITY.instantiate()
 		verity.camera_ref = camera_instance
 		add_child(verity)

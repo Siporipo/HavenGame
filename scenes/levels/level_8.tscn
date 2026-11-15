@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://b1jpeql0e2hhk" path="res://assets/PlatformerTilemapBase.png" id="1_y1kxu"]
 [ext_resource type="PackedScene" uid="uid://n30k8ab5e7bs" path="res://scenes/slime.tscn" id="2_irbrv"]
+[ext_resource type="PackedScene" uid="uid://cwtrdudu6p2bh" path="res://scenes/klucis.tscn" id="2_rmft0"]
+[ext_resource type="PackedScene" uid="uid://ko4dhtdomlqo" path="res://scenes/hit_point.tscn" id="4_ki8mi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dfxo2"]
 texture = ExtResource("1_y1kxu")
@@ -87,3 +89,14 @@ position = Vector2(857, -591)
 
 [node name="Slime8" parent="." unique_id=1552477322 instance=ExtResource("2_irbrv")]
 position = Vector2(741, -103)
+
+[node name="Klucis" parent="." unique_id=1717242799 instance=ExtResource("2_rmft0")]
+position = Vector2(412.99997, -553)
+rotation = -0.8841756
+
+[node name="Klucis2" parent="." unique_id=635718145 instance=ExtResource("2_rmft0")]
+position = Vector2(516, -560)
+rotation = -0.8311367
+
+[node name="Hit point" parent="." unique_id=699409179 instance=ExtResource("4_ki8mi")]
+position = Vector2(517, -677)
