@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://biq2ubv708xcu"]
 
 [ext_resource type="Texture2D" uid="uid://b1jpeql0e2hhk" path="res://assets/PlatformerTilemapBase.png" id="1_hn12h"]
-[ext_resource type="PackedScene" path="res://scenes/klucis.tscn" id="2_ihfcg"]
-[ext_resource type="PackedScene" path="res://scenes/lielais_melnais_caurums.tscn" id="3_rka8t"]
+[ext_resource type="PackedScene" uid="uid://cwtrdudu6p2bh" path="res://scenes/klucis.tscn" id="2_ihfcg"]
+[ext_resource type="PackedScene" uid="uid://cfm32da37opxm" path="res://scenes/lielais_melnais_caurums.tscn" id="3_rka8t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5hph3"]
 texture = ExtResource("1_hn12h")

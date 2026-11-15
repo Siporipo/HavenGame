@@ -40,8 +40,10 @@ var camera_tzoom := Vector2(1, 1)
 func load_level():
 	level_selection_menu.queue_free()
 	level_selection_menu = null
-	if player_instance == null:
-		player_instance = PLAYER.instantiate()
+	if player_instance != null:
+		player_instance.queue_free()
+		player_instance = null
+	player_instance = PLAYER.instantiate()
 	player_instance.position = PLAYER_SPAWN_POSITIONS[Autoload.level-1]
 	if level_instance != null:
 		level_instance.queue_free()
@@ -107,7 +109,7 @@ func _process(_delta: float) -> void:
 		camera_instance.zoom += (camera_tzoom - camera_instance.zoom) / 10
 	if player_instance != null:
 		camera_target = player_instance.position
-		camera_tzoom = Vector2(2, 2)
+		camera_tzoom = Vector2(1.5, 1.5)
 	else:
 		camera_target = Vector2(0, 0)
 		camera_tzoom = Vector2(1, 1)

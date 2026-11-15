@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://b1jpeql0e2hhk" path="res://assets/PlatformerTilemapBase.png" id="1_4038r"]
 [ext_resource type="PackedScene" uid="uid://cwtrdudu6p2bh" path="res://scenes/klucis.tscn" id="2_2k3dv"]
 [ext_resource type="PackedScene" uid="uid://cfm32da37opxm" path="res://scenes/lielais_melnais_caurums.tscn" id="3_alqfr"]
-[ext_resource type="PackedScene" uid="uid://wwefj0140nb2" path="res://scenes/player.tscn" id="4_fiq81"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_21xmu"]
 texture = ExtResource("1_4038r")
@@ -80,6 +79,3 @@ rotation = 2.2798944
 [node name="Lielais melnais caurums" parent="." unique_id=419668898 instance=ExtResource("3_alqfr")]
 position = Vector2(1774.0001, -412.00003)
 rotation = 0.28021947
-
-[node name="Player" parent="." unique_id=1902593887 instance=ExtResource("4_fiq81")]
-position = Vector2(241, 241)
