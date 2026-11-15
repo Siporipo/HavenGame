@@ -11,6 +11,9 @@ script/source = "extends CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 var is_dead = false
 
+func _ready() -> void:
+	Autoload.enemies_in_level += 1
+
 const SPEED = 30
 var direction = -1
 func _physics_process(delta: float) -> void:
@@ -34,8 +37,11 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
+	body.queue_free()
 	is_dead = true
+	$Area2D.set_deferred(\"monitoring\", false)
 	animated_sprite_2d.play(\"die\")
+	Autoload.enemy_death()
 	
 "
 

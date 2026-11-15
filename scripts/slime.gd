@@ -12,7 +12,7 @@ func _ready() -> void:
 	Autoload.enemies_in_level += 1
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
+	# Add the gravity.g
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 

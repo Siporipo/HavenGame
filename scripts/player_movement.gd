@@ -11,6 +11,7 @@ var offset = 5
 var health = 100
 
 func _physics_process(delta: float) -> void:
+	print(Autoload.enemies_in_level)
 	$ProgressBar.value = health
 	# Add the gravity.
 	if is_on_floor():
@@ -48,7 +49,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
+func _on_area_2d_body_entered(_body: Node2D) -> void:
 	health -= 20
 	velocity.y = JUMP_VELOCITY
 	if health <= 0:
