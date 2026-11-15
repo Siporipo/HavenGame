@@ -8,7 +8,10 @@ const JUMP_VELOCITY = -400.0
 var Jumps_Left = 2
 var offset = 5
 
+var health = 100
+
 func _physics_process(delta: float) -> void:
+	$ProgressBar.value = health
 	# Add the gravity.
 	if is_on_floor():
 		velocity.y = 0
@@ -43,3 +46,11 @@ func _physics_process(delta: float) -> void:
 		mov_anim.play("idle")
 	
 	move_and_slide()
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	health -= 20
+	velocity.y = JUMP_VELOCITY
+	if health <= 0:
+		Autoload.player_died()
+	

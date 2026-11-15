@@ -92,6 +92,12 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_dwmeo"]
 radius = 33.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dwmeo"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b8fgr"]
+bg_color = Color(0.9372549, 0.8, 0, 1)
+
 [node name="Verity" type="CharacterBody2D" unique_id=218832769]
 script = ExtResource("1_6kb7q")
 
@@ -101,10 +107,23 @@ animation = &"shoot"
 frame_progress = 0.554951
 
 [node name="Area2D" type="Area2D" parent="." unique_id=336196155]
-collision_layer = 0
+collision_layer = 2
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1931479038]
 shape = SubResource("CircleShape2D_dwmeo")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=642271913]
+offset_left = -129.0
+offset_top = -58.0
+offset_right = -125.0
+offset_bottom = -31.0
+rotation = -1.5643761
+scale = Vector2(4.87304, 9.922538)
+theme_override_styles/background = SubResource("StyleBoxFlat_dwmeo")
+theme_override_styles/fill = SubResource("StyleBoxFlat_b8fgr")
+value = 20.84
+fill_mode = 2
+show_percentage = false
 
 [connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]

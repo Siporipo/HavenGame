@@ -1,6 +1,7 @@
 extends Node
 
 signal level_done
+signal reload_level
 
 var player_available = false
 
@@ -11,6 +12,9 @@ var enemies_in_level = 0
 
 func enemy_death() -> void:
 	enemies_in_level -= 1
+
+func player_died():
+	reload_level.emit()
 
 func level_finished():
 	if level + 1 > max_level:

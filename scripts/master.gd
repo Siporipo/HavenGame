@@ -106,6 +106,7 @@ func load_main_menu() -> void:
 	add_child(main_menu_instance)
 
 func _ready() -> void:
+	Autoload.reload_level.connect(load_level)
 	Autoload.level_done.connect(load_level_selection)
 	camera_instance = Camera2D.new()
 	camera_instance.position = camera_target

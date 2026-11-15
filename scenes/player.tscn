@@ -97,6 +97,12 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_13mor"]
 size = Vector2(8.5, 15.5)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b8fgr"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dwmeo"]
+bg_color = Color(0.74847955, 0.25039643, 0.14698285, 1)
+
 [node name="Player" type="CharacterBody2D" unique_id=1902593887 groups=["player"]]
 process_mode = 1
 collision_layer = 8
@@ -120,4 +126,27 @@ target_position = Vector2(0, 9)
 
 [node name="Gun" parent="." unique_id=548761031 instance=ExtResource("3_qhqgy")]
 
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1756500590]
+z_index = 1716
+offset_left = 12.999999
+offset_top = -28.999998
+offset_right = 17.0
+offset_bottom = -1.9999981
+rotation = 1.5720351
+theme_override_styles/background = SubResource("StyleBoxFlat_b8fgr")
+theme_override_styles/fill = SubResource("StyleBoxFlat_dwmeo")
+step = 1.0
+value = 5.0
+fill_mode = 3
+show_percentage = false
+
+[node name="Area2D" type="Area2D" parent="." unique_id=582913123]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=1696426037]
+position = Vector2(0, -7.75)
+shape = SubResource("RectangleShape2D_13mor")
+
 [connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
