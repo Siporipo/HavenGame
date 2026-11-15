@@ -7,5 +7,6 @@
 script = ExtResource("1_x77fm")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=811220735]
+z_index = 68
 texture_filter = 1
 texture = ExtResource("2_og67c")

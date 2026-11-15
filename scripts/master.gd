@@ -4,6 +4,7 @@ var PLAYER = preload("res://scenes/player.tscn")
 var MAIN_MENU = preload("res://scenes/main_menu.tscn")
 var PAUSE_MENU = preload("res://scenes/pause_overlay.tscn")
 var LEVEL_MENU = preload("res://scenes/level_selection.tscn")
+var VERITY = preload("res://scenes/verity.tscn")
 var LEVEL = [
 	preload("res://scenes/levels/level_1.tscn"),
 	preload("res://scenes/levels/level_2.tscn"),
@@ -33,11 +34,15 @@ var player_instance: Node2D = null
 var main_menu_instance: Control = null
 var pause_menu_instance: CanvasLayer = null
 var level_selection_menu: Control = null
+var verity: Node2D = null
 
 var camera_target := Vector2(0, 0)
 var camera_tzoom := Vector2(1, 1)
 
 func load_level():
+	if Autoload.level == 9:
+		verity = VERITY.instantiate()
+		add_child(verity)
 	level_selection_menu.queue_free()
 	level_selection_menu = null
 	if player_instance != null:
@@ -53,6 +58,9 @@ func load_level():
 	add_child(level_instance)
 
 func load_level_selection():
+	if verity != null:
+		verity.queue_free()
+		verity = null
 	if player_instance != null:
 		player_instance.queue_free()
 		player_instance = null
@@ -76,6 +84,9 @@ func load_level_selection():
 	add_child(level_selection_menu)
 
 func load_main_menu() -> void:
+	if verity != null:
+		verity.queue_free()
+		verity = null
 	if player_instance != null:
 		player_instance.queue_free()
 		player_instance = null
