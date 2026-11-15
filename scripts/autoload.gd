@@ -2,6 +2,8 @@ extends Node
 
 signal level_done
 
+var player_available = false
+
 var level = 0
 var max_level = 1
 

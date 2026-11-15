@@ -104,6 +104,10 @@ func _ready() -> void:
 	load_main_menu()
 
 func _process(_delta: float) -> void:
+	if player_instance == null:
+		Autoload.player_available = false
+	else:
+		Autoload.player_available = true
 	if not get_tree().paused:
 		camera_instance.position += (camera_target - camera_instance.position) / 10
 		camera_instance.zoom += (camera_tzoom - camera_instance.zoom) / 10

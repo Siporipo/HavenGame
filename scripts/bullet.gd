@@ -18,3 +18,5 @@ func _process(delta: float) -> void:
 	if collision:
 		direction = direction.bounce(collision.get_normal())
 	tick += 1
+	if not Autoload.player_available:
+		queue_free()
