@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://ko4dhtdomlqo"]
+
+[ext_resource type="Texture2D" uid="uid://bi6cw5771mfi6" path="res://assets/Utilities.png" id="1_4ry41"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2gt1d"]
+atlas = ExtResource("1_4ry41")
+region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f36jy"]
+atlas = ExtResource("1_4ry41")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j65aw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2gt1d")
+}],
+"loop": 1,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f36jy")
+}],
+"loop": 1,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j65aw"]
+size = Vector2(16, 16)
+
+[node name="Hit point" type="Area2D" unique_id=699409179]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=73428738]
+position = Vector2(-2.3841858e-07, -2.3841858e-07)
+scale = Vector2(1.1875001, 1.1875001)
+sprite_frames = SubResource("SpriteFrames_j65aw")
+animation = &"closed"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=383787319]
+shape = SubResource("RectangleShape2D_j65aw")
