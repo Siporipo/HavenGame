@@ -5,7 +5,7 @@ signal level_done
 var player_available = false
 
 var level = 0
-var max_level = 1
+var max_level = 9
 
 var enemies_in_level = 0
 

@@ -42,6 +42,7 @@ var camera_tzoom := Vector2(1, 1)
 func load_level():
 	if Autoload.level == 9:
 		verity = VERITY.instantiate()
+		verity.camera_ref = camera_instance
 		add_child(verity)
 	level_selection_menu.queue_free()
 	level_selection_menu = null
