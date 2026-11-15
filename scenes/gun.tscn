@@ -3,12 +3,9 @@
 [ext_resource type="Script" uid="uid://djg5wvnpmg0xq" path="res://scripts/gun.gd" id="1_x77fm"]
 [ext_resource type="Texture2D" uid="uid://f4u0cgmatynk" path="res://assets/pew-pew.png" id="2_og67c"]
 
-[node name="Gun" type="Node2D" unique_id=548761031 node_paths=PackedStringArray("bullet_parent")]
+[node name="Gun" type="Node2D" unique_id=548761031]
 script = ExtResource("1_x77fm")
-bullet_parent = NodePath("BulletParent")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=811220735]
 texture_filter = 1
 texture = ExtResource("2_og67c")
-
-[node name="BulletParent" type="Node" parent="." unique_id=1043589938]

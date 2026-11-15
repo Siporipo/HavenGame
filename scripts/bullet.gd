@@ -12,7 +12,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if tick > 1000:
 		queue_free()
-	rotation = acos(direction.dot(Vector2.RIGHT))
+	#rotation = acos(direction.dot(Vector2.RIGHT))
 	velocity = direction * speed
 	var collision = move_and_collide(velocity * delta)
 	if collision:

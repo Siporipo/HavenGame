@@ -1,7 +1,6 @@
 extends Node2D
 
 var BULLET := preload("res://scenes/bullet.tscn")
-@export var bullet_parent: Node
 const offset = 10
 var mouse_vec: Vector2
 
@@ -15,5 +14,5 @@ func _process(_delta: float) -> void:
 		var bullet_instance = BULLET.instantiate()
 		bullet_instance.direction = mouse_vec
 		bullet_instance.speed = 200
-		bullet_instance.position = position
-		bullet_parent.add_child(bullet_instance)
+		bullet_instance.position = get_parent().position + Vector2(0, -12) + mouse_vec * offset
+		get_parent().get_parent().add_child(bullet_instance)
