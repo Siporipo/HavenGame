@@ -71,7 +71,7 @@ func _process(_delta: float) -> void:
 		camera_instance.zoom += (camera_tzoom - camera_instance.zoom) / 10
 	if player_instance != null:
 		camera_target = player_instance.position
-		camera_tzoom = Vector2(5, 5)
+		camera_tzoom = Vector2(2, 2)
 	else:
 		camera_target = Vector2(0, 0)
 		camera_tzoom = Vector2(1, 1)

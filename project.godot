@@ -14,6 +14,10 @@ config/name="Game"
 run/main_scene="uid://ca4ul17xd6s38"
 config/features=PackedStringArray("4.7", "Mobile")
 
+[autoload]
+
+Autoload="*uid://cuo4hjc71e2m1"
+
 [display]
 
 window/stretch/mode="canvas_items"
