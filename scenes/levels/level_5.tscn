@@ -86,3 +86,33 @@ position = Vector2(4854, -433)
 
 [node name="Slime" parent="." unique_id=1586945335 instance=ExtResource("4_laj7o")]
 position = Vector2(5008, -532)
+
+[node name="Slime2" parent="." unique_id=1445517899 instance=ExtResource("4_laj7o")]
+position = Vector2(4054, -3)
+
+[node name="Slime3" parent="." unique_id=1457962163 instance=ExtResource("4_laj7o")]
+position = Vector2(4110, -114)
+
+[node name="Slime4" parent="." unique_id=1152489085 instance=ExtResource("4_laj7o")]
+position = Vector2(4015, -212)
+
+[node name="Slime5" parent="." unique_id=667548610 instance=ExtResource("4_laj7o")]
+position = Vector2(3485, -1027)
+
+[node name="Slime6" parent="." unique_id=1399531313 instance=ExtResource("4_laj7o")]
+position = Vector2(2863, -993)
+
+[node name="Slime7" parent="." unique_id=109270577 instance=ExtResource("4_laj7o")]
+position = Vector2(3316, -828)
+
+[node name="Slime8" parent="." unique_id=878749947 instance=ExtResource("4_laj7o")]
+position = Vector2(4387, -1541)
+
+[node name="Slime9" parent="." unique_id=1383010115 instance=ExtResource("4_laj7o")]
+position = Vector2(4084, -1137)
+
+[node name="Slime10" parent="." unique_id=2141476646 instance=ExtResource("4_laj7o")]
+position = Vector2(4396, -1036)
+
+[node name="Slime11" parent="." unique_id=832172821 instance=ExtResource("4_laj7o")]
+position = Vector2(4450, -434)
