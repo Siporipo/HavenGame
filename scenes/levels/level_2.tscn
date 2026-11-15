@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b1jpeql0e2hhk" path="res://assets/PlatformerTilemapBase.png" id="1_4038r"]
 [ext_resource type="PackedScene" uid="uid://cwtrdudu6p2bh" path="res://scenes/klucis.tscn" id="2_2k3dv"]
-[ext_resource type="PackedScene" uid="uid://cfm32da37opxm" path="res://scenes/lielais_melnais_caurums.tscn" id="3_alqfr"]
+[ext_resource type="PackedScene" uid="uid://ko4dhtdomlqo" path="res://scenes/hit_point.tscn" id="3_ra442"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_21xmu"]
 texture = ExtResource("1_4038r")
@@ -69,17 +69,24 @@ tile_map_data = PackedByteArray("AAAHAAwAAAABAAMAAAAHAA0AAAAAAAUAAAAIAAwAAAABAAM
 tile_set = SubResource("TileSet_1vivr")
 
 [node name="Klucis" parent="." unique_id=1717242799 instance=ExtResource("2_2k3dv")]
-position = Vector2(548, -659)
+position = Vector2(536, -618)
 rotation = -0.89468676
 
 [node name="Klucis2" parent="." unique_id=1801347393 instance=ExtResource("2_2k3dv")]
-position = Vector2(866, -691)
+position = Vector2(854, -650)
 rotation = 2.2798944
 
-[node name="Lielais melnais caurums" parent="." unique_id=419668898 instance=ExtResource("3_alqfr")]
-position = Vector2(833.0001, -971)
-rotation = 0.28021947
-
 [node name="Klucis3" parent="." unique_id=1832091278 instance=ExtResource("2_2k3dv")]
-position = Vector2(784.00006, -944.00006)
+position = Vector2(663, -712)
 rotation = 0.87575716
+
+[node name="Klucis4" parent="." unique_id=495221196 instance=ExtResource("2_2k3dv")]
+position = Vector2(694, -669)
+rotation = -0.0024970518
+
+[node name="Hit point" parent="." unique_id=699409179 instance=ExtResource("3_ra442")]
+position = Vector2(715, -704.99994)
+
+[node name="Klucis5" parent="." unique_id=39634241 instance=ExtResource("2_2k3dv")]
+position = Vector2(764, -737)
+rotation = 0.24527545
