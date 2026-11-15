@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://df2xmd8r2ebvl"]
 
+[ext_resource type="Script" uid="uid://buokcfi0bprh6" path="res://scripts/level_selection.gd" id="1_u1g2d"]
+
 [sub_resource type="LabelSettings" id="LabelSettings_6h1hi"]
 font_size = 47
 
@@ -12,15 +14,14 @@ offset_left = -1.0
 offset_right = -1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_u1g2d")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2064530654]
-layout_mode = 1
-anchors_preset = 13
-anchor_left = 0.5
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -0.5
-offset_right = 0.5
+layout_mode = 0
+offset_left = 366.0
+offset_top = -1.0
+offset_right = 767.0
+offset_bottom = 647.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -38,10 +39,141 @@ label_settings = SubResource("LabelSettings_6h1hi")
 
 [node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer" unique_id=723794246]
 layout_mode = 2
+theme_override_constants/margin_left = 91
+theme_override_constants/margin_top = 10
 
 [node name="GridContainer" type="GridContainer" parent="VBoxContainer/MarginContainer2" unique_id=1450090838]
 layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/h_separation = 12
+theme_override_constants/v_separation = -8
+columns = 3
 
-[node name="lvl1" type="Button" parent="VBoxContainer/MarginContainer2/GridContainer" unique_id=1965811124]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/MarginContainer2/GridContainer" unique_id=1968895756]
 layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="lvl1" type="Button" parent="VBoxContainer/MarginContainer2/GridContainer/MarginContainer" unique_id=1965811124]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
 text = "1"
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/MarginContainer2/GridContainer" unique_id=1538510931]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="lvl2" type="Button" parent="VBoxContainer/MarginContainer2/GridContainer/MarginContainer2" unique_id=864828798]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "2"
+
+[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer/MarginContainer2/GridContainer" unique_id=741855167]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="lvl3" type="Button" parent="VBoxContainer/MarginContainer2/GridContainer/MarginContainer3" unique_id=1049412737]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "3"
+
+[node name="MarginContainer4" type="MarginContainer" parent="VBoxContainer/MarginContainer2/GridContainer" unique_id=2009753521]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="lvl4" type="Button" parent="VBoxContainer/MarginContainer2/GridContainer/MarginContainer4" unique_id=723175081]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "4"
+
+[node name="MarginContainer5" type="MarginContainer" parent="VBoxContainer/MarginContainer2/GridContainer" unique_id=2065634203]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="lvl5" type="Button" parent="VBoxContainer/MarginContainer2/GridContainer/MarginContainer5" unique_id=575125811]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "5"
+
+[node name="MarginContainer6" type="MarginContainer" parent="VBoxContainer/MarginContainer2/GridContainer" unique_id=218417318]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="lvl6" type="Button" parent="VBoxContainer/MarginContainer2/GridContainer/MarginContainer6" unique_id=668330481]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "6"
+
+[node name="MarginContainer7" type="MarginContainer" parent="VBoxContainer/MarginContainer2/GridContainer" unique_id=807414736]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="lvl7" type="Button" parent="VBoxContainer/MarginContainer2/GridContainer/MarginContainer7" unique_id=714466060]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "7"
+
+[node name="MarginContainer8" type="MarginContainer" parent="VBoxContainer/MarginContainer2/GridContainer" unique_id=884548360]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="lvl8" type="Button" parent="VBoxContainer/MarginContainer2/GridContainer/MarginContainer8" unique_id=421126673]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "8"
+
+[node name="MarginContainer9" type="MarginContainer" parent="VBoxContainer/MarginContainer2/GridContainer" unique_id=154814481]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="lvl9" type="Button" parent="VBoxContainer/MarginContainer2/GridContainer/MarginContainer9" unique_id=750268695]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "9"
+
+[node name="MarginContainer10" type="MarginContainer" parent="VBoxContainer" unique_id=417437268]
+layout_mode = 2
+theme_override_constants/margin_left = 57
+theme_override_constants/margin_top = 45
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="Button" type="Button" parent="VBoxContainer/MarginContainer10" unique_id=1018150237]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Back to Main Menu"
