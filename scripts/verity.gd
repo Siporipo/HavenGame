@@ -9,12 +9,12 @@ var target_pos := Vector2(0, 0)
 func _process(delta: float) -> void:
 	if next_attack_timeout < 0:
 		next_attack_timeout = 5 + randf() * 5
-		var randi = clampi(randf() * 2 + 1, 1, 3)
-		if randi == 1:
+		var randint = clampi(int(randf() * 2 + 1), 1, 3)
+		if randint == 1:
 			attack = "sine_hover"
-		elif randi == 2:
+		elif randint == 2:
 			attack = "diagonal"
-		elif randi == 3:
+		elif randint == 3:
 			attack = "knuckles"
 	else:
 		if attack == "sine_hover":
@@ -35,7 +35,7 @@ func _process(delta: float) -> void:
 	next_attack_timeout -= delta
 
 
-func _on_area_2d_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
+func _on_area_2d_body_shape_entered(_body_rid: RID, body: Node2D, _body_shape_index: int, _local_shape_index: int) -> void:
 	health -= 5
 	body.queue_free()
 	if health <= 0:

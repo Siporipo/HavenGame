@@ -108,9 +108,18 @@ func _ready() -> void:
 	Autoload.level_done.connect(load_level_selection)
 	camera_instance = Camera2D.new()
 	camera_instance.position = camera_target
-	camera_instance.zoom = Vector2(0.1, 0.1)
+	camera_instance.zoom = Vector2(0.3, 0.3)
 	camera_tzoom = Vector2(1, 1)
 	add_child(camera_instance)
+	var temp := ColorRect.new()
+	temp.z_index = -1000
+	temp.size = Vector2(5000, 5000)
+	temp.position = Vector2(-1500, -1000)
+	temp.color.a = 1
+	temp.color.r = 0.5
+	temp.color.g = 0.5
+	temp.color.b = 1
+	camera_instance.add_child(temp)
 	
 	load_main_menu()
 

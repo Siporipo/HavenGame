@@ -13,4 +13,6 @@ func enemy_death() -> void:
 	enemies_in_level -= 1
 
 func level_finished():
+	if level + 1 > max_level:
+		max_level = level + 1
 	level_done.emit()
