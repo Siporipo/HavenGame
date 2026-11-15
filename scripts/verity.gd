@@ -17,20 +17,12 @@ func _process(delta: float) -> void:
 		elif randint == 3:
 			attack = "knuckles"
 	else:
-		if attack == "sine_hover":
-			$AnimatedSprite2D.play("float")
-			target_pos = (Vector2(sin(next_attack_timeout * 2) * 1000, cos(next_attack_timeout * 2) * 500) - position) / 10
-		elif attack == "diagonal":
+		if attack == "idle":
 			$AnimatedSprite2D.play("idle")
-			if next_attack_timeout < 5:
-				target_pos = Vector2(60 * next_attack_timeout, 30 * next_attack_timeout)
-			else:
-				target_pos = Vector2(-50 * (next_attack_timeout - 5), 50 * (next_attack_timeout - 5))
-			
-		elif attack == "knuckles":
-			$AnimatedSprite2D.play("shoot")
-			target_pos = Vector2(randf() * 1000 -500, -randf() * 500 + 250)
-			
+		elif attack == "sine_hover":
+			target_pos = Vector2(cos(next_attack_timeout * 4) * 500, sin(next_attack_timeout * 6) * 300) + camera_ref.position
+		elif attack == "diagonal":
+			target_pos = camera_ref.position + Vector2(20 * next_attack_timeout)
 	position += (target_pos - position) / 5
 	next_attack_timeout -= delta
 

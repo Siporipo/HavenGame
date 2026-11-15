@@ -59,6 +59,7 @@ theme_override_constants/margin_bottom = 12
 [node name="lvl1" type="Button" parent="VBoxContainer/MarginContainer2/GridContainer/MarginContainer" unique_id=1965811124]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_colors/font_color = Color(0.3647059, 0.3647059, 0.3647059, 1)
 theme_override_font_sizes/font_size = 50
 text = "1"
 
@@ -72,6 +73,7 @@ theme_override_constants/margin_bottom = 12
 [node name="lvl2" type="Button" parent="VBoxContainer/MarginContainer2/GridContainer/MarginContainer2" unique_id=864828798]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_colors/font_color = Color(0.36471137, 0.3647114, 0.3647114, 1)
 theme_override_font_sizes/font_size = 50
 text = "2"
 
@@ -85,6 +87,7 @@ theme_override_constants/margin_bottom = 12
 [node name="lvl3" type="Button" parent="VBoxContainer/MarginContainer2/GridContainer/MarginContainer3" unique_id=1049412737]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_colors/font_color = Color(0.3647059, 0.3647059, 0.3647059, 1)
 theme_override_font_sizes/font_size = 50
 text = "3"
 
@@ -98,6 +101,7 @@ theme_override_constants/margin_bottom = 12
 [node name="lvl4" type="Button" parent="VBoxContainer/MarginContainer2/GridContainer/MarginContainer4" unique_id=723175081]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_colors/font_color = Color(0.3647059, 0.3647059, 0.3647059, 1)
 theme_override_font_sizes/font_size = 50
 text = "4"
 
@@ -111,6 +115,7 @@ theme_override_constants/margin_bottom = 12
 [node name="lvl5" type="Button" parent="VBoxContainer/MarginContainer2/GridContainer/MarginContainer5" unique_id=575125811]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_colors/font_color = Color(0.3647059, 0.3647059, 0.3647059, 1)
 theme_override_font_sizes/font_size = 50
 text = "5"
 
@@ -124,6 +129,7 @@ theme_override_constants/margin_bottom = 12
 [node name="lvl6" type="Button" parent="VBoxContainer/MarginContainer2/GridContainer/MarginContainer6" unique_id=668330481]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_colors/font_color = Color(0.3647059, 0.3647059, 0.3647059, 1)
 theme_override_font_sizes/font_size = 50
 text = "6"
 
@@ -137,6 +143,7 @@ theme_override_constants/margin_bottom = 12
 [node name="lvl7" type="Button" parent="VBoxContainer/MarginContainer2/GridContainer/MarginContainer7" unique_id=714466060]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_colors/font_color = Color(0.3647059, 0.3647059, 0.3647059, 1)
 theme_override_font_sizes/font_size = 50
 text = "7"
 
@@ -150,6 +157,7 @@ theme_override_constants/margin_bottom = 12
 [node name="lvl8" type="Button" parent="VBoxContainer/MarginContainer2/GridContainer/MarginContainer8" unique_id=421126673]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_colors/font_color = Color(0.3647059, 0.3647059, 0.3647059, 1)
 theme_override_font_sizes/font_size = 50
 text = "8"
 
@@ -163,6 +171,7 @@ theme_override_constants/margin_bottom = 12
 [node name="lvl9" type="Button" parent="VBoxContainer/MarginContainer2/GridContainer/MarginContainer9" unique_id=750268695]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_colors/font_color = Color(0.3647059, 0.3647059, 0.3647059, 1)
 theme_override_font_sizes/font_size = 50
 text = "9"
 
