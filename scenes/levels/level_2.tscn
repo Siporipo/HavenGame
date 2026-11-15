@@ -95,5 +95,5 @@ rotation = 0.7461293
 position = Vector2(759, -615)
 
 [node name="Klucis7" parent="." unique_id=94360485 instance=ExtResource("2_2k3dv")]
-position = Vector2(658, -707)
+position = Vector2(671, -727)
 rotation = -0.89068204
