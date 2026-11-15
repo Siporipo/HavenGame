@@ -50,6 +50,7 @@ script = ExtResource("1_mkf8s")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1734998815]
 texture_filter = 1
+rotation = -0.002124317
 sprite_frames = SubResource("SpriteFrames_dwmeo")
 frame_progress = 0.688787
 

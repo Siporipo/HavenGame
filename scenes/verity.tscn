@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://cxyucbhsvvd26"]
+
+[ext_resource type="Script" uid="uid://dd8jpikvtoja0" path="res://scripts/verity.gd" id="1_6kb7q"]
+[ext_resource type="Texture2D" uid="uid://cv1op35r3e1vg" path="res://assets/VerityBoss.png" id="2_05v41"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8hlnv"]
+atlas = ExtResource("2_05v41")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iqtp8"]
+atlas = ExtResource("2_05v41")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qq1xj"]
+atlas = ExtResource("2_05v41")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x50gr"]
+atlas = ExtResource("2_05v41")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fcgvt"]
+atlas = ExtResource("2_05v41")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3c1yo"]
+atlas = ExtResource("2_05v41")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2ibm"]
+atlas = ExtResource("2_05v41")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n6yx1"]
+atlas = ExtResource("2_05v41")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hctn4"]
+atlas = ExtResource("2_05v41")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dwmeo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8hlnv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iqtp8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qq1xj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x50gr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fcgvt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3c1yo")
+}],
+"loop": 1,
+"name": &"float",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2ibm")
+}],
+"loop": 1,
+"name": &"hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n6yx1")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hctn4")
+}],
+"loop": 1,
+"name": &"shoot",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dwmeo"]
+radius = 33.0
+
+[node name="Verity" type="CharacterBody2D" unique_id=218832769]
+script = ExtResource("1_6kb7q")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1620332671]
+sprite_frames = SubResource("SpriteFrames_dwmeo")
+animation = &"shoot"
+frame_progress = 0.9563705
+
+[node name="Area2D" type="Area2D" parent="." unique_id=336196155]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1931479038]
+shape = SubResource("CircleShape2D_dwmeo")

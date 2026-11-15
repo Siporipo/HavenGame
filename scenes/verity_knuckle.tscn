@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://bum8t68x78loa"]
+
+[ext_resource type="Script" uid="uid://mimrbea8t26r" path="res://scripts/knuckle_bread.gd" id="1_10ro8"]
+[ext_resource type="Texture2D" uid="uid://cv1op35r3e1vg" path="res://assets/VerityBoss.png" id="2_2t8s6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ay2wh"]
+atlas = ExtResource("2_2t8s6")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wdbid"]
+atlas = ExtResource("2_2t8s6")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b8fgr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ay2wh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wdbid")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xg4w6"]
+radius = 14.995219
+
+[node name="verity_knuckle" type="CharacterBody2D" unique_id=652337287]
+slide_on_ceiling = false
+script = ExtResource("1_10ro8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2076875015]
+sprite_frames = SubResource("SpriteFrames_b8fgr")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=580249703]
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=554721279]
+rotation = 1.5319797
+shape = SubResource("CapsuleShape2D_xg4w6")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
