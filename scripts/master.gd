@@ -5,18 +5,26 @@ var MAIN_MENU = preload("res://scenes/main_menu.tscn")
 var PAUSE_MENU = preload("res://scenes/pause_overlay.tscn")
 var LEVEL_MENU = preload("res://scenes/level_selection.tscn")
 var LEVEL = [
-	preload("res://scenes/temp_level.tscn"),
-	null,
-	null,
-	null,
-	null
+	preload("res://scenes/levels/level_1.tscn"),
+	preload("res://scenes/levels/level_2.tscn"),
+	preload("res://scenes/levels/level_3.tscn"),
+	preload("res://scenes/levels/level_4.tscn"),
+	preload("res://scenes/levels/level_5.tscn"),
+	preload("res://scenes/levels/level_7.tscn"),
+	preload("res://scenes/levels/level_8.tscn"),
+	preload("res://scenes/levels/level_9.tscn"),
+	preload("res://scenes/levels/bossfight.tscn")
 ]
 var PLAYER_SPAWN_POSITIONS = [
-	Vector2(0, -100),
-	Vector2(0, -100),
-	Vector2(0, -100),
-	Vector2(0, -100),
-	Vector2(0, -100)
+	Vector2(0, 0),
+	Vector2(300, 200),
+	Vector2(1800, 0),
+	Vector2(2900, 50),
+	Vector2(4100, 50),
+	Vector2(375, 50),
+	Vector2(525, 200),
+	Vector2(675, 100),
+	Vector2(1825, -310)
 ]
 
 var camera_instance: Camera2D = null
