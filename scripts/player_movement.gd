@@ -13,20 +13,20 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor():
 		velocity.y = 0
 		Jumps_Left = 2
-		if Input.is_action_just_pressed("ui_accept"):
+		if Input.is_action_just_pressed("jump"):
 			velocity.y = JUMP_VELOCITY
 			Jumps_Left -= 1
-	elif rapid_j.is_colliding() and Input.is_action_just_pressed("ui_accept"):
+	elif rapid_j.is_colliding() and Input.is_action_just_pressed("jump"):
 		Jumps_Left = 1
 		velocity.y = JUMP_VELOCITY
 	else:
-		if Jumps_Left >= 1 and Input.is_action_just_pressed("ui_accept"):
+		if Jumps_Left >= 1 and Input.is_action_just_pressed("jump"):
 			velocity.y = JUMP_VELOCITY
 			Jumps_Left -= 1
 		else:
 			velocity += get_gravity() * 1.5  * delta
 	
-	var direction := Input.get_axis("ui_left", "ui_right")
+	var direction := Input.get_axis("move_left", "move_right")
 	if direction:
 		offset = velocity.x
 		if SPEED*Multiply < SPEED:
