@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://biq2ubv708xcu"]
 
 [ext_resource type="Texture2D" uid="uid://b1jpeql0e2hhk" path="res://assets/PlatformerTilemapBase.png" id="1_hn12h"]
-[ext_resource type="PackedScene" path="res://scenes/klucis.tscn" id="2_ihfcg"]
-[ext_resource type="PackedScene" path="res://scenes/lielais_melnais_caurums.tscn" id="3_rka8t"]
+[ext_resource type="PackedScene" uid="uid://cwtrdudu6p2bh" path="res://scenes/klucis.tscn" id="2_ihfcg"]
+[ext_resource type="PackedScene" uid="uid://ko4dhtdomlqo" path="res://scenes/hit_point.tscn" id="3_nsrm0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5hph3"]
 texture = ExtResource("1_hn12h")
@@ -69,5 +69,8 @@ tile_set = SubResource("TileSet_1vivr")
 position = Vector2(-55.999996, -184)
 rotation = -0.65929556
 
-[node name="Lielais melnais caurums" parent="." unique_id=419668898 instance=ExtResource("3_rka8t")]
-position = Vector2(139, -217)
+[node name="Hit point" parent="." unique_id=699409179 instance=ExtResource("3_nsrm0")]
+position = Vector2(156, -197)
+
+[node name="Klucis2" parent="." unique_id=845862123 instance=ExtResource("2_ihfcg")]
+position = Vector2(133, -179)
