@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b1jpeql0e2hhk" path="res://assets/PlatformerTilemapBase.png" id="1_3igfe"]
 [ext_resource type="PackedScene" uid="uid://ko4dhtdomlqo" path="res://scenes/hit_point.tscn" id="3_bl61q"]
 [ext_resource type="PackedScene" uid="uid://cwtrdudu6p2bh" path="res://scenes/klucis.tscn" id="3_w8d84"]
+[ext_resource type="PackedScene" uid="uid://n30k8ab5e7bs" path="res://scenes/slime.tscn" id="4_772ry"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0wqyy"]
 texture = ExtResource("1_3igfe")
@@ -85,3 +86,21 @@ position = Vector2(557, 751)
 [node name="Klucis4" parent="." unique_id=303209156 instance=ExtResource("3_w8d84")]
 position = Vector2(562, 800.00006)
 rotation = 0.08947417
+
+[node name="Slime" parent="." unique_id=1586945335 instance=ExtResource("4_772ry")]
+position = Vector2(633, 27)
+
+[node name="Slime2" parent="." unique_id=2123410182 instance=ExtResource("4_772ry")]
+position = Vector2(291, 313)
+
+[node name="Slime3" parent="." unique_id=490202128 instance=ExtResource("4_772ry")]
+position = Vector2(318, 701)
+
+[node name="Slime4" parent="." unique_id=899868713 instance=ExtResource("4_772ry")]
+position = Vector2(-23, 656)
+
+[node name="Slime5" parent="." unique_id=396968642 instance=ExtResource("4_772ry")]
+position = Vector2(27, 573)
+
+[node name="Slime6" parent="." unique_id=1346486041 instance=ExtResource("4_772ry")]
+position = Vector2(-205, 219)
