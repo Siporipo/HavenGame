@@ -45,6 +45,8 @@ func _physics_process(delta: float) -> void:
 		offset *= 0.9
 		velocity.x = offset
 		mov_anim.play("idle")
+	if position.y > 2000:
+		Autoload.player_died()
 	
 	move_and_slide()
 

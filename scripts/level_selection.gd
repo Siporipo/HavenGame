@@ -27,9 +27,7 @@ func level7():
 func level8():
 	Autoload.level = 8
 	load_level.emit()
-func level9():
-	Autoload.level = 9
-	load_level.emit()
+
 func menu_request():
 	back_to_main_menu.emit()
 
@@ -57,7 +55,5 @@ func _ready() -> void:
 							if Autoload.max_level > 7:
 								%lvl8.pressed.connect(level8)
 								%lvl8.add_theme_color_override("font_color", Color(1, 1, 1, 1))
-								if Autoload.max_level > 8:
-									%lvl9.pressed.connect(level9)
-									%lvl9.add_theme_color_override("font_color", Color(1, 1, 1, 1))
+	
 	%Button.pressed.connect(menu_request)

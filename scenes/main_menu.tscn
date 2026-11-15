@@ -44,7 +44,7 @@ theme_override_constants/margin_bottom = 12
 
 [node name="Label" type="Label" parent="VBoxContainer/MarginContainer2" unique_id=1036910190]
 layout_mode = 2
-text = "Game Name"
+text = "Hit It!"
 label_settings = SubResource("LabelSettings_dwmeo")
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=295586169]

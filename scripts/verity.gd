@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+var knuckles = preload("res://scenes/verity_knuckle.tscn")
+
 var health = 100
 @export var camera_ref: Camera2D
 var next_attack_timeout = 5.0
@@ -30,6 +32,10 @@ func _process(delta: float) -> void:
 		elif attack == "diagonal":
 			target_pos = camera_ref.position + Vector2(20 * (next_attack_timeout-7), -20 * (next_attack_timeout - 7))- Vector2(0, 50)
 			$AnimatedSprite2D.play("float")
+			if hit_tick % 10 == 0:
+				var tmp = knuckles.instantiate()
+				tmp.position = position
+				tmp.dmove = Vector2(200 * randf(), 200 * randf())
 	position += (target_pos - position) / 10
 	next_attack_timeout -= delta
 	if hit_tick > 0:

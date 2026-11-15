@@ -13,7 +13,6 @@ var LEVEL = [
 	preload("res://scenes/levels/level_5.tscn"),
 	preload("res://scenes/levels/level_7.tscn"),
 	preload("res://scenes/levels/level_8.tscn"),
-	preload("res://scenes/levels/level_9.tscn"),
 	preload("res://scenes/levels/bossfight.tscn")
 ]
 var PLAYER_SPAWN_POSITIONS = [
@@ -24,7 +23,6 @@ var PLAYER_SPAWN_POSITIONS = [
 	Vector2(4100, 50),
 	Vector2(375, 50),
 	Vector2(525, 200),
-	Vector2(675, 100),
 	Vector2(1825, -310)
 ]
 
@@ -44,7 +42,8 @@ func load_level():
 		verity = VERITY.instantiate()
 		verity.camera_ref = camera_instance
 		add_child(verity)
-	level_selection_menu.queue_free()
+	if level_selection_menu != null:
+		level_selection_menu.queue_free()
 	level_selection_menu = null
 	if player_instance != null:
 		player_instance.queue_free()
