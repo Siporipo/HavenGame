@@ -2,17 +2,15 @@ extends Node2D
 
 var BULLET := preload("res://scenes/bullet.tscn")
 @export var bullet_parent: Node
-const offset = 100
-@export var target: Node2D
+const offset = 10
 var mouse_vec: Vector2
 
-func _process(delta: float) -> void:
-	mouse_vec = (get_global_mouse_position() - position).normalized()
-	if target != null:
-		position = target.position + mouse_vec * offset
-	else:
-		position = mouse_vec * offset
+func _process(_delta: float) -> void:
+	mouse_vec = (get_global_mouse_position() - (get_parent().position - Vector2(0, 12))).normalized()
+	position = mouse_vec * offset + Vector2(0, -8)
 	$Sprite2D.rotation = acos(mouse_vec.dot(Vector2.RIGHT))
+	if mouse_vec.y < 0:
+		$Sprite2D.rotation = -$Sprite2D.rotation
 	if Input.is_action_just_pressed("Shoot"):
 		var bullet_instance = BULLET.instantiate()
 		bullet_instance.direction = mouse_vec

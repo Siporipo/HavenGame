@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b3hpov2ix5d6" path="res://assets/PlatformerCharacterBase.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://b1gudb0u8rrll" path="res://scripts/player_movement.gd" id="1_g2els"]
+[ext_resource type="PackedScene" uid="uid://dfc4yd2rbksds" path="res://scenes/gun.tscn" id="3_qhqgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3vyb7"]
 atlas = ExtResource("1_3vyb7")
@@ -114,5 +115,7 @@ shape = SubResource("RectangleShape2D_13mor")
 
 [node name="Rapid_Jump" type="RayCast2D" parent="." unique_id=669632595]
 target_position = Vector2(0, 9)
+
+[node name="Gun" parent="." unique_id=548761031 instance=ExtResource("3_qhqgy")]
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
